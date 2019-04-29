@@ -239,8 +239,18 @@ public class code_hash_1_2 {
 	 * 执行用时 : 6 ms, 在Uncommon Words from Two Sentences的Java提交中击败了92.26% 的用户
 	 * 内存消耗 : 35.1 MB, 在Uncommon Words from Two Sentences的Java提交中击败了94.94% 的用户
 	 */
-	
- 
+	/**
+	 * 分糖果
+	 * 右移一位是除2
+	 * @param candies
+	 * @return
+	 */
+	public int distributeCandies(int[] candies) {
+		int len=candies.length>>1;
+		
+		return 0;
+        
+    }
 	public static void main(String[] args) {
 		int[] n1=new int[3];
 		n1[0]=4;
