@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 public class code_hash_1_2 {
@@ -222,6 +225,22 @@ public class code_hash_1_2 {
         }
 		return re1;
     }
+	/**
+	 * 寻找不常见的单词
+	 * 将两个字符串连在一起然后分割做计数就行
+	 * 给定两个句子 A 和 B 。 （句子是一串由空格分隔的单词。每个单词仅由小写字母组成。）
+	 * 如果一个单词在其中一个句子中只出现一次，在另一个句子中却没有出现
+	 * ，那么这个单词就是不常见的。
+	 * 返回所有不常用单词的列表。
+	 * 您可以按任何顺序返回列表。
+	 * @param A
+	 * @param B
+	 * @return
+	 * 执行用时 : 6 ms, 在Uncommon Words from Two Sentences的Java提交中击败了92.26% 的用户
+	 * 内存消耗 : 35.1 MB, 在Uncommon Words from Two Sentences的Java提交中击败了94.94% 的用户
+	 */
+	
+ 
 	public static void main(String[] args) {
 		int[] n1=new int[3];
 		n1[0]=4;
