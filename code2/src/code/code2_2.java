@@ -1,11 +1,11 @@
-package code2;
+package code;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class code2_2 {
 	/**
-	 * ÊäÈëÒ»¸öÊý£¬Í³¼ÆÏà¼Ó¸÷Î»µÄÊýÈç¹ûÎªµ¥Î»Êý¾Í·µ»Ø
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Í³ï¿½ï¿½ï¿½ï¿½Ó¸ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½Í·ï¿½ï¿½ï¿½
 	 * @param num
 	 * @return
 	 */
@@ -19,11 +19,11 @@ public class code2_2 {
 		return num;
 	}
 	/**
-	 * ¸ø¶¨Ò»¸öÕûÊýÊý×é nums£¬ÆäÖÐÇ¡ºÃÓÐÁ½¸öÔªËØÖ»³öÏÖÒ»´Î£¬ÆäÓàËùÓÐÔªËØ¾ù³öÏÖÁ½´Î¡£ ÕÒ³öÖ»³öÏÖÒ»´ÎµÄÄÇÁ½¸öÔªËØ¡£
-		Ê¾Àý :
+	 * ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ numsï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¡ï¿½ ï¿½Ò³ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø¡ï¿½
+		Ê¾ï¿½ï¿½ :
 		
-		ÊäÈë: [1,2,1,3,2,5]
-		Êä³ö: [3,5]
+		ï¿½ï¿½ï¿½ï¿½: [1,2,1,3,2,5]
+		ï¿½ï¿½ï¿½: [3,5]
 	 * @param nums
 	 * @return
 	 */

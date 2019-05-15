@@ -1,4 +1,4 @@
-package code2;
+package code;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 public class code_4_1 {
 	/**
-	 * ×ÓÓòÃû·ÃÎÊ¼ÆÊý
-	 * ÓÃ×ÖµäÀ´×ö¼´¿É
-	 * Ö´ÐÐÓÃÊ± : 40 ms, ÔÚSubdomain Visit CountµÄJavaÌá½»ÖÐ»÷°ÜÁË32.29% µÄÓÃ»§
-		ÄÚ´æÏûºÄ : 48 MB, ÔÚSubdomain Visit CountµÄJavaÌá½»ÖÐ»÷°ÜÁË75.96% µÄÓÃ»§
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½
+	 * ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * Ö´ï¿½ï¿½ï¿½ï¿½Ê± : 40 ms, ï¿½ï¿½Subdomain Visit Countï¿½ï¿½Javaï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½32.29% ï¿½ï¿½ï¿½Ã»ï¿½
+		ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ : 48 MB, ï¿½ï¿½Subdomain Visit Countï¿½ï¿½Javaï¿½á½»ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½75.96% ï¿½ï¿½ï¿½Ã»ï¿½
 	 * @param cpdomains
 	 * @return
 	 */
@@ -18,7 +18,7 @@ public class code_4_1 {
 		HashMap<String, Integer> map=new HashMap<>();
         for(int i=0;i<cpdomains.length;i++){
         	String[] cpd0main=cpdomains[i].split(" ");
-        	String[] cpd0=cpd0main[1].split("\\.");//ÐèÒª×ªÒå£¬ÓÈÆäÒª×¢Òâ
+        	String[] cpd0=cpd0main[1].split("\\.");//ï¿½ï¿½Òª×ªï¿½å£¬ï¿½ï¿½ï¿½ï¿½Òª×¢ï¿½ï¿½
         	String domain="";
         	for(int j=cpd0.length-1;j>=0;j--){
         		if(j==cpd0.length-1){
@@ -40,10 +40,10 @@ public class code_4_1 {
         }
         return re;
     }
-	//×ÖÄ¸´óÐ¡µÄÈ«ÅÅÁÐ
+	//ï¿½ï¿½Ä¸ï¿½ï¿½Ð¡ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½
 	/**
 	 * 
-	 * ÓÃµÝ¹é»òÕßÓÃÕ»¼´¿É
+	 * ï¿½ÃµÝ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½
 	 * @param S
 	 * @return
 	 */
@@ -73,14 +73,14 @@ public class code_4_1 {
 		}
 	}
 	/**
-	 * ¶¯Ì¬¹æ»®µÄµÝ¹é
+	 * ï¿½ï¿½Ì¬ï¿½æ»®ï¿½ÄµÝ¹ï¿½
 	 */
-	static int[] c = new int[100];     //½«»®·Öµ½µÄÃ¿¸öÊý×Ö´æ´¢µ½cÊý×éÀïÃæ
-	static int num = 0;                //´æ´¢´ý»®·ÖµÄÊý×Ö
+	static int[] c = new int[100];     //ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Ö´æ´¢ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	static int num = 0;                //ï¿½æ´¢ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½
 	static int nums=0;
     static void dfs(int start,int n)
     {
-//    	System.out.println(nums+"Ö´ÐÐµÄ´ÎÊý");
+//    	System.out.println(nums+"Ö´ï¿½ÐµÄ´ï¿½ï¿½ï¿½");
     	nums++;
     	if(n == 0)
     	{
@@ -88,21 +88,21 @@ public class code_4_1 {
     		{
     			System.out.print(c[i]+"+");
     		}
-    		return;//µÝ¹éµÄ³ö¿Ú
+    		return;//ï¿½Ý¹ï¿½Ä³ï¿½ï¿½ï¿½
     	}
     	for(int i = 1;i <= n;i++)
     	{	
     		if(i >= c[start-1])
     		{
-//    			System.out.println(c[start-1]+"startµÄÖµ");
+//    			System.out.println(c[start-1]+"startï¿½ï¿½Öµ");
     		   c[start] = i;
-    		   dfs(start+1,n-i);//µÝ¹éµÄÌõ¼þ
+    		   dfs(start+1,n-i);//ï¿½Ý¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     		}
     	}
     }
     /**
-     * ·Ö¸î»ØÎÄ´®
-     * »ØËÝËã·¨
+     * ï¿½Ö¸ï¿½ï¿½ï¿½Ä´ï¿½
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ã·¨
      * @param args
      */
     public static List<List<String>> partition(String s) {

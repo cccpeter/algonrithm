@@ -1,4 +1,4 @@
-package code2;
+package code;
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Stack;
 public class code_hash_1_1 {
     /**
-     * ¼ÆËã½×³ËÊý£¬¼´n! = n * (n-1) * ... * 2 * 1
+     * ï¿½ï¿½ï¿½ï¿½×³ï¿½ï¿½ï¿½n! = n * (n-1) * ... * 2 * 1
      * @param n
      * @return
      */
@@ -17,7 +17,7 @@ public class code_hash_1_1 {
     }
 
     /**
-     * ¼ÆËãÅÅÁÐÊý£¬¼´A(n, m) = n!/(n-m)!
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A(n, m) = n!/(n-m)!
      * @param n
      * @param m
      * @return
@@ -27,7 +27,7 @@ public class code_hash_1_1 {
     }
 
     /**
-     * ¼ÆËã×éºÏÊý£¬¼´C(n, m) = n!/((n-m)! * m!)
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½C(n, m) = n!/((n-m)! * m!)
      * @param n
      * @param m
      * @return
@@ -40,9 +40,9 @@ public class code_hash_1_1 {
 
 
     /**
-     * ×éºÏÑ¡Ôñ£¨´ÓÁÐ±íÖÐÑ¡Ôñn¸ö×éºÏ£©
-     * @param dataList ´ýÑ¡ÁÐ±í
-     * @param n Ñ¡Ôñ¸öÊý
+     * ï¿½ï¿½ï¿½Ñ¡ï¿½ñ£¨´ï¿½ï¿½Ð±ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½nï¿½ï¿½ï¿½ï¿½Ï£ï¿½
+     * @param dataList ï¿½ï¿½Ñ¡ï¿½Ð±ï¿½
+     * @param n Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     public static void combinationSelect(int[] dataList, int n) {
         System.out.println(String.format("C(%d, %d) = %d", dataList.length, n, combination(dataList.length, n)));
@@ -50,11 +50,11 @@ public class code_hash_1_1 {
     }
 
     /**
-     * ×éºÏÑ¡Ôñ
-     * @param dataList ´ýÑ¡ÁÐ±í
-     * @param dataIndex ´ýÑ¡¿ªÊ¼Ë÷Òý
-     * @param resultList Ç°Ãæ£¨resultIndex-1£©¸öµÄ×éºÏ½á¹û
-     * @param resultIndex Ñ¡ÔñË÷Òý£¬´Ó0¿ªÊ¼
+     * ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
+     * @param dataList ï¿½ï¿½Ñ¡ï¿½Ð±ï¿½
+     * @param dataIndex ï¿½ï¿½Ñ¡ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+     * @param resultList Ç°ï¿½æ£¨resultIndex-1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½
+     * @param resultIndex Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0ï¿½ï¿½Ê¼
      */
     static private List<List<Integer>> list=new ArrayList<List<Integer>>();
     static HashMap<String, String> map=new HashMap<>();
@@ -62,26 +62,26 @@ public class code_hash_1_1 {
 //    private static void combinationSelect(int[] dataList, int dataIndex, int[] resultList, int resultIndex) {
 //        int resultLen = resultList.length;
 //        int resultCount = resultIndex + 1;
-//        if (resultCount > resultLen) { // È«²¿Ñ¡ÔñÍêÊ±£¬Êä³ö×éºÏ½á¹û
+//        if (resultCount > resultLen) { // È«ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½
 //            String mString="";
 //            int muns=0;
-//            List<Integer> list1 = new ArrayList<>();//Ð¡ÁÐ±í
+//            List<Integer> list1 = new ArrayList<>();//Ð¡ï¿½Ð±ï¿½
 //            for(int i=0;i<resultLen;i++){
 //            	System.out.println(resultList[i]);
 //            	mString+=resultList[i];
 //            	muns+=resultList[i];
 //            	list1.add(resultList[i]);
 //            }
-//            if(map.get(mString)==null&&muns==target){//²»ÖØ¸´
+//            if(map.get(mString)==null&&muns==target){//ï¿½ï¿½ï¿½Ø¸ï¿½
 //            	list.add(list1);
 //            	map.put(mString, "1");
 //            }
 //            
-////            System.out.println("------------Êä³ö-------------");
+////            System.out.println("------------ï¿½ï¿½ï¿½-------------");
 //            return;
 //        }
 
-        // µÝ¹éÑ¡ÔñÏÂÒ»¸ö
+        // ï¿½Ý¹ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 //        for (int i = dataIndex; i < dataList.length + resultCount - resultLen; i++) {
 //            resultList[resultIndex] = dataList[i];
 //            combinationSelect(dataList, i + 1, resultList, resultIndex + 1);
@@ -90,7 +90,7 @@ public class code_hash_1_1 {
     private static void combinationSelect(int[] dataList, int dataIndex, int[] resultList, int resultIndex) {  
         int resultLen = resultList.length;  
         int resultCount = resultIndex + 1;  
-        if (resultCount > resultLen) { // È«²¿Ñ¡ÔñÍêÊ±£¬Êä³ö×éºÏ½á¹û  
+        if (resultCount > resultLen) { // È«ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ï¿½  
             System.out.println(Arrays.asList(resultList));  
             for(int i=0;i<resultLen;i++){
             	System.out.print(resultList[i]+",");
@@ -98,14 +98,14 @@ public class code_hash_1_1 {
             return;  
         }  
       
-        // µÝ¹éÑ¡ÔñÏÂÒ»¸ö  
+        // ï¿½Ý¹ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½  
         for (int i = dataIndex; i < dataList.length + resultCount - resultLen; i++) {  
             resultList[resultIndex] = dataList[i];  
             combinationSelect(dataList, i + 1, resultList, resultIndex + 1);  
         }  
     }  
 /**
- * ¿ìÀÖÊý£¬¿ìÀÖ¾ÍÊÇÁË
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ï¿½
  * @param args
  */
     static public boolean isHappy(int n) {
@@ -128,7 +128,7 @@ public class code_hash_1_1 {
         }
     }
     /**
-     * ÕÒÖÊÊý£¬¶òÀ­¶àÈûÉ¸Ñ¡·¨(´óÍøÉ¸Ñ¡·¨¡­¡­)
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
      * @param args
      */
     static public int getela(int n){
@@ -152,7 +152,7 @@ public class code_hash_1_1 {
     	return re;
     }
     /**
-     * Í¬¹¹×Ö·û´®
+     * Í¬ï¿½ï¿½ï¿½Ö·ï¿½
      * @param s
      * @param t
      * @return

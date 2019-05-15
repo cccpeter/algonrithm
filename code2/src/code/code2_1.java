@@ -1,4 +1,4 @@
-package code2;
+package code;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +8,7 @@ public class code2_1 {
 	     int l=s.length();
 	     int arr=0;
 	     for (int i = 0; i < l; i++) {
-			for(int j=i+1;j<= l;j++){//ÆðÊ¼×Ö·ûÎªi+1Ö±ÖÁÖÕµã
+			for(int j=i+1;j<= l;j++){//ï¿½ï¿½Ê¼ï¿½Ö·ï¿½Îªi+1Ö±ï¿½ï¿½ï¿½Õµï¿½
 				int num=getsonstring(s, i, j);
 				arr=(arr<num)?num:arr;
 			}

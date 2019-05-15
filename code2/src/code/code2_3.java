@@ -1,4 +1,4 @@
-package code2;
+package code;
 import java.lang.String;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,26 +7,26 @@ import java.util.Stack;
 public class code2_3 {
 
 	/**
-	 * N ¶ÔÇéÂÂ×øÔÚÁ¬ÐøÅÅÁÐµÄ 2N ¸ö×ùÎ»ÉÏ£¬ÏëÒªÇ£µ½¶Ô·½µÄÊÖ¡£ ¼ÆËã×îÉÙ½»»»×ùÎ»µÄ´ÎÊý£¬ÒÔ±ãÃ¿¶ÔÇéÂÂ¿ÉÒÔ²¢¼ç×øÔÚÒ»Æð¡£ Ò»´Î½»»»¿ÉÑ¡ÔñÈÎÒâÁ½ÈË£¬ÈÃËûÃÇÕ¾ÆðÀ´½»»»×ùÎ»¡£
+	 * N ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ 2N ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ï£ï¿½ï¿½ï¿½ÒªÇ£ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¡ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ä´ï¿½ï¿½ï¿½ï¿½Ô±ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ Ò»ï¿½Î½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 
-ÈËºÍ×ùÎ»ÓÃ 0 µ½ 2N-1 µÄÕûÊý±íÊ¾£¬ÇéÂÂÃÇ°´Ë³Ðò±àºÅ£¬µÚÒ»¶ÔÊÇ (0, 1)£¬µÚ¶þ¶ÔÊÇ (2, 3)£¬ÒÔ´ËÀàÍÆ£¬×îºóÒ»¶ÔÊÇ (2N-2, 2N-1)¡£
+ï¿½Ëºï¿½ï¿½ï¿½Î»ï¿½ï¿½ 0 ï¿½ï¿½ 2N-1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½Ë³ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ (0, 1)ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ (2, 3)ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½Æ£ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ (2N-2, 2N-1)ï¿½ï¿½
 
-ÕâÐ©ÇéÂÂµÄ³õÊ¼×ùÎ»  row[i] ÊÇÓÉ×î³õÊ¼×øÔÚµÚ i ¸ö×ùÎ»ÉÏµÄÈË¾ö¶¨µÄ¡£
+ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ÂµÄ³ï¿½Ê¼ï¿½ï¿½Î»  row[i] ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Úµï¿½ i ï¿½ï¿½ï¿½ï¿½Î»ï¿½Ïµï¿½ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½
 
-Ê¾Àý 1:
+Ê¾ï¿½ï¿½ 1:
 
-ÊäÈë: row = [0, 2, 1, 3]
-Êä³ö: 1
-½âÊÍ: ÎÒÃÇÖ»ÐèÒª½»»»row[1]ºÍrow[2]µÄÎ»ÖÃ¼´¿É¡£
-Ê¾Àý 2:
+ï¿½ï¿½ï¿½ï¿½: row = [0, 2, 1, 3]
+ï¿½ï¿½ï¿½: 1
+ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½row[1]ï¿½ï¿½row[2]ï¿½ï¿½Î»ï¿½Ã¼ï¿½ï¿½É¡ï¿½
+Ê¾ï¿½ï¿½ 2:
 
-ÊäÈë: row = [3, 2, 0, 1]
-Êä³ö: 0
-½âÊÍ: ÎÞÐè½»»»×ùÎ»£¬ËùÓÐµÄÇéÂÂ¶¼ÒÑ¾­¿ÉÒÔÊÖÇ£ÊÖÁË¡£
-ËµÃ÷:
+ï¿½ï¿½ï¿½ï¿½: row = [3, 2, 0, 1]
+ï¿½ï¿½ï¿½: 0
+ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½è½»ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½ï¿½ï¿½Ë¡ï¿½
+Ëµï¿½ï¿½:
 
-len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
-¿ÉÒÔ±£Ö¤row ÊÇÐòÁÐ 0...len(row)-1 µÄÒ»¸öÈ«ÅÅÁÐ¡£
+len(row) ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ [4, 60]ï¿½ï¿½Î§ï¿½Ú¡ï¿½
+ï¿½ï¿½ï¿½Ô±ï¿½Ö¤row ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0...len(row)-1 ï¿½ï¿½Ò»ï¿½ï¿½È«ï¿½ï¿½ï¿½Ð¡ï¿½
 	 */
 	public int minSwapsCouples(int[] row) {
         int res=0;
@@ -49,7 +49,7 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
         row[i] = row[j];
         row[j] = temp;
     }
-    public int couple(int a) {//·µ»ØËû×ùÎ»Ç°ºóµÄÁ½Î»
+    public int couple(int a) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Î»
         return (a % 2 == 0) ? a + 1 : a - 1;
     }
     
@@ -57,12 +57,12 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
      * 
      */
     public int maxProduct(String[] words) {
-        //ÅÐ¶ÏÁ©¸öµ¥´ÊÊÇ·ñÓÐ¹«¹²×ÖÄ¸
+        //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸
         int wordslen=words.length;
         int max=0;
         for(int i=0;i<wordslen;i++){
             for(int j=i+1;j<wordslen;j++){
-                //ÅÐ¶ÏÊÇ·ñÓÐ¹«¹²×Ö·û
+                //ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
                 if(sameWord(words[i],words[j])){
                     char[] word1list=words[i].toCharArray();
                     char[] word2list=words[j].toCharArray();
@@ -80,7 +80,7 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
         for(int i=0;i<word1list.length;i++){
             for(int j=0;j<word2list.length;j++){
             	if(word1list[i]==word2list[j]){
-                	System.out.println("´æÔÚÏàÍ¬×Ö·û´®---"+word1+"++++"+word2+"****"+word1list+"*****"+word2list[j]);
+                	System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½Ö·ï¿½---"+word1+"++++"+word2+"****"+word1list+"*****"+word2list[j]);
                     return false;
                 }
             }        
@@ -104,16 +104,16 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
         return list;
     }
     /**
-     * ×î¶ÌÂ·¾¶
+     * ï¿½ï¿½ï¿½Â·ï¿½ï¿½
      * @param args
      */
-    HashMap<Integer, Integer[]> vews = new HashMap<Integer, Integer[]>();//ËùÓÐ¶¥µã
-    HashMap<Integer, Integer> allvews = new HashMap<Integer, Integer>();//ËùÓÐ½Úµã
-    HashMap<Integer, Integer> nowvews = new HashMap<Integer, Integer>();//µ±Ç°ËùÓÐ¶¥µãµÄµ½´ïÂ·¾¶
+    HashMap<Integer, Integer[]> vews = new HashMap<Integer, Integer[]>();//ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½
+    HashMap<Integer, Integer> allvews = new HashMap<Integer, Integer>();//ï¿½ï¿½ï¿½Ð½Úµï¿½
+    HashMap<Integer, Integer> nowvews = new HashMap<Integer, Integer>();//ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Äµï¿½ï¿½ï¿½Â·ï¿½ï¿½
     int[][] times;
     public int networkDelayTime(int[][] times, int N, int K) {
     	this.times=times;
-        int edgnum=times.length;//±ßµÄÊýÁ¿
+        int edgnum=times.length;//ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½
         
         int re=-1;//result
         for(int i=0;i<edgnum;i++){
@@ -129,20 +129,20 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
                 }
                 num[nums.length+1]=i;
                 vews.put(times[i][0], num);
-                allvews.put(times[i][0], i);//¼ÓÈë¶¥µã
-                nowvews.put(times[i][0], 9999);//¶¨ÒåËùÓÐ½ÚµãµÄ¾àÀë³õÊ¼»¯
+                allvews.put(times[i][0], i);//ï¿½ï¿½ï¿½ë¶¥ï¿½ï¿½
+                nowvews.put(times[i][0], 9999);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð½Úµï¿½Ä¾ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
                 if(allvews.get(times[i][1])==null){
-                	allvews.put(times[i][1],i);//¼ÓÈëÖ¸ÏòµÄ½Úµã
+                	allvews.put(times[i][1],i);//ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½Ä½Úµï¿½
                 	nowvews.put(times[i][1], 9999);
                 }
             }
         }
         /**
          * Ë¼Â·
-         * °Ñ¼¸ÌõÂ·×ßÒ»±é£¬Ñ¡×î¶ÌµÄÂ·¾¶ºÍËûµÄ½Úµã£¬Í¬Ê±»¹ÒªºÍÒÑ¾­´æÔÚµÄ½Úµã×ö¶Ô±È¡£
+         * ï¿½Ñ¼ï¿½ï¿½ï¿½Â·ï¿½ï¿½Ò»ï¿½é£¬Ñ¡ï¿½ï¿½Ìµï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½Úµã£¬Í¬Ê±ï¿½ï¿½Òªï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ÚµÄ½Úµï¿½ï¿½ï¿½ï¿½Ô±È¡ï¿½
          */
         if(allvews.get(K) != null){
-        	//ÊäÈë¶¥µãÈ»ºóÊä³ö×î¶ÌÂ·¾¶ºÍÐÂ¶¥µã
+        	//ï¿½ï¿½ï¿½ë¶¥ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½
         	getlist(K);
         	for(int value : nowvews.values()){
         		if(value==9999){
@@ -159,17 +159,17 @@ len(row) ÊÇÅ¼ÊýÇÒÊýÖµÔÚ [4, 60]·¶Î§ÄÚ¡£
         
     }
     public void getlist(int K) {
-    	//ÊäÈë¶¥µãÈ»ºóÊä³ö×î¶ÌÂ·¾¶ºÍÐÂ¶¥µã
+    	//ï¿½ï¿½ï¿½ë¶¥ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½
     	if (allvews.size()==0) {
-		    Integer[] index=vews.get(K);//»ñÈ¡¸Ã¶¥µãÓÐ¼¸ÌõÂ·
+		    Integer[] index=vews.get(K);//ï¿½ï¿½È¡ï¿½Ã¶ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Â·
 		    int[] minarray=new int[2];
 		    minarray[0]=9999;
 		    for(int i=0;i<index.length;i++){
-		    	int[] time_index=times[index[i]];//µ¥¸öµÄÇé¿ö£¬Èý¸öÊýÖµ
-		    	//µ½½ÚµãµÄ¾àÀë
+		    	int[] time_index=times[index[i]];//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+		    	//ï¿½ï¿½ï¿½Úµï¿½Ä¾ï¿½ï¿½ï¿½
 		    	if(minarray[0]>time_index[2]){
 		    		minarray[0]=time_index[2];
-		    		minarray[1]=time_index[1];//½«×î¶ÌµÄ½ÚµãÂ¼Èë
+		    		minarray[1]=time_index[1];//ï¿½ï¿½ï¿½ï¿½ÌµÄ½Úµï¿½Â¼ï¿½ï¿½
 		    	}
 		    	int nowtime=nowvews.get(time_index[1]);
 		    	if(nowtime>time_index[2]){

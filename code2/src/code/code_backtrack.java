@@ -1,4 +1,4 @@
-package code2;
+package code;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +28,7 @@ public class code_backtrack {
 	        	return al;
 	        }
 	    }
-    	//½»»»
+    	//ï¿½ï¿½ï¿½ï¿½
 		private static void exch(int[] nums, int i, int j) {
 			int temp=nums[i];
 			nums[i]=nums[j];

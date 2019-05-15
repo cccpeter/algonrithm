@@ -1,4 +1,4 @@
-package code2;
+package code;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -17,7 +17,7 @@ public class SocketReceiver {
 			InetAddress address = InetAddress.getByName(host);
 			int port = 15014;
  
-			// ´´½¨ÓÃÓÚ½ÓÊÕÐÅÏ¢µÄsocket
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½socket
 			DatagramSocket socketRecv = new DatagramSocket(port, address);
 			byte buf[] = new byte[1024];
 			DatagramPacket recvPacket = new DatagramPacket(buf, buf.length);
@@ -25,13 +25,13 @@ public class SocketReceiver {
 			socketRecv.receive(recvPacket);
 			String recvMsg = new String(buf, 0, recvPacket.getLength());
 			System.out.println("in the SocketRecviver.java----the recvMsg is : " + recvMsg);
-			System.out.println("×ª»¯Îª×Ö·û´®");
+			System.out.println("×ªï¿½ï¿½Îªï¿½Ö·ï¿½");
 			System.out.println(SocketReceiver.toStringHex2(recvMsg));
 			
 			InetAddress clientAddress = recvPacket.getAddress();
 			 int clientPort = recvPacket.getPort();
-			System.out.println("¶Ô·½µÄIPºÍportÊÇ£º " + clientAddress + "   " + clientPort);  
-			// Ïò·¢ËÍ·½·´À¡ÐÅÏ¢
+			System.out.println("ï¿½Ô·ï¿½ï¿½ï¿½IPï¿½ï¿½portï¿½Ç£ï¿½ " + clientAddress + "   " + clientPort);  
+			// ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 			 
 			SocketAddress socketAddress = recvPacket.getSocketAddress();
 			String returnMsg = "Hello, I have recvived the msg";
@@ -43,7 +43,7 @@ public class SocketReceiver {
 		}
 		
 	}
-	// ×ª»¯Ê®Áù½øÖÆ±àÂëÎª×Ö·û´®
+	// ×ªï¿½ï¿½Ê®ï¿½ï¿½ï¿½ï¿½Æ±ï¿½ï¿½ï¿½Îªï¿½Ö·ï¿½
 	public static String toStringHex2(String s) {
 	   byte[] baKeyword = new byte[s.length() / 2];
 	   for (int i = 0; i < baKeyword.length; i++) {

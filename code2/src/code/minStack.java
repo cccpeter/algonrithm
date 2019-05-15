@@ -1,4 +1,4 @@
-package code2;
+package code;
 
 class minStack {
 
@@ -30,14 +30,14 @@ class minStack {
                 }
             }
         }
-//        System.out.println(nums+"È¥µôÕ»¶¥»ñµÃÕ»¶¥µÄÊý×éÏÂ±ê1");
+//        System.out.println(nums+"È¥ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½1");
         minStack.nums=nums-1;
-//        System.out.println(nums+"È¥µôÕ»¶¥»ñµÃÕ»¶¥µÄÊý×éÏÂ±ê2");
-        //É¾³ýÒªÈ·ÈÏ×îÐ¡ÔªËØÊÇ·ñ·¢Éú¸Ä±ä
+//        System.out.println(nums+"È¥ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½2");
+        //É¾ï¿½ï¿½ÒªÈ·ï¿½ï¿½ï¿½ï¿½Ð¡Ôªï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ä±ï¿½
     }
     
     public int top() {
-//    	System.out.println(nums+"»ñµÃÕ»¶¥µÄÊý×éÏÂ±ê");
+//    	System.out.println(nums+"ï¿½ï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½");
 //    	System.out.println(numStack[2]);
 //    	System.out.println(numStack[1]);
         return numStack[nums];
@@ -48,7 +48,7 @@ class minStack {
     }
     public static int[] addLengthArray(int[] array){
 		int[] newArray = new int [array.length*2];
-                //½«arrayÊý×é´Ó0Î»ÖÃÖÁarray.lengthÎ»ÖÃ£¬¸´ÖÆµ½newArrayÊý×é0Î»ÖÃµ½array.lengthÎ»ÖÃ¡£
+                //ï¿½ï¿½arrayï¿½ï¿½ï¿½ï¿½ï¿½0Î»ï¿½ï¿½ï¿½ï¿½array.lengthÎ»ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Æµï¿½newArrayï¿½ï¿½ï¿½ï¿½0Î»ï¿½Ãµï¿½array.lengthÎ»ï¿½Ã¡ï¿½
                 System.arraycopy(array,0,newArray,0,array.length);
 		return newArray;
 	}
@@ -59,7 +59,7 @@ class minStack {
     	 obj.push(0);
     	 obj.push(-5);
     	 obj.pop();
-    	 int param_3 = obj.top();//Îª-2²Å¶Ô
+    	 int param_3 = obj.top();//Îª-2ï¿½Å¶ï¿½
     	 int param_4 = obj.getMin();
     	 System.out.println(param_3);
     	 System.out.println(param_4);
